@@ -9,7 +9,6 @@ function App() {
       .then(console.log)
   }, [])
 
-
   return (
     <div className="App">
       Hello
