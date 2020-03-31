@@ -1,8 +1,12 @@
 import getDateInBusTrackerFormat from './getDateAndTime.js'
 import { API_KEY } from './apiKey.js'
+import md5 from 'md5';
 
-const appendDateToKey = (date) => {
+export const appendDateToKey = (date) => {
     return API_KEY + getDateInBusTrackerFormat(date)
 }
 
-export default appendDateToKey;
+export const getFinalKeyFromDate = (date) => {
+    const keyPreMd5 = appendDateToKey(date)
+    return md5(keyPreMd5)
+}
