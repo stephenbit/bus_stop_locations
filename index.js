@@ -1,16 +1,17 @@
-const express = require('express')
-const fetch = require('node-fetch')
+// using "type": "module" in package.json to enable ES modules
+import express from 'express'
+import fetch from 'node-fetch'
+import cors from 'cors'
+import { getFinalKeyFromDate } from './client/src/generateApiKey.js'
 const app = express()
-const cors = require('cors')
-
-// XL472I2YRVUQF2EJ5T77AEENJ2020032819
-// eb3364ebbfb0a6af284670db9f5d61ec
 
 app.use(cors())
 // Access-Control-Allow-Origin: *
 
 app.get('/', (request, response) => {
-  fetch('http://ws.mybustracker.co.uk/?module=json&key=eb3364ebbfb0a6af284670db9f5d61ec&function=getBusStops')
+  const URL = 'http://ws.mybustracker.co.uk/?module=json&key='
+  + getFinalKeyFromDate(new Date()) + '&function=getBusStops'
+  fetch(URL)
     .then(res => res.json())
     .then(stops => response.json(stops))
 })
