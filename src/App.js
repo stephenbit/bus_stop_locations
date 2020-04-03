@@ -1,18 +1,20 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
-import BusStopMap from './components/map.js'
+import BusStopMap from './components/BusStopMap.js'
 
 function App() {
+
+  const [stops, setStops] = useState([]);
 
   useEffect(() => {
     fetch('http://localhost:8080')
       .then(res => res.json())
-      .then(console.log)
+      .then(obJOfStops => setStops(obJOfStops.busStops))
   }, [])
 
   return (
     <div className="App">
-      <BusStopMap />
+      <BusStopMap stops={stops}/>
     </div>
   );
 }
