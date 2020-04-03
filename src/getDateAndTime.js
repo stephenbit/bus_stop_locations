@@ -8,9 +8,15 @@ const getDateInBusTrackerFormat = (date) => {
     } else {
         month = runningMonth
     }
-    const dateOfMonth = date.getDate()
-    const hour = date.getUTCHours()
+    let dateOfMonth = date.getDate()
+    dateOfMonth = String(dateOfMonth)
+    if (dateOfMonth.length < 2){
+        dateOfMonth = "0" + dateOfMonth
+    } 
+    const hour = date.getHours()
+    console.log(dateOfMonth)
     const dateInBusTrackerFormat = runningDate.concat(year, month, dateOfMonth, hour)
+    console.log(dateInBusTrackerFormat)
     return dateInBusTrackerFormat
 }
 

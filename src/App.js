@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import './App.css';
+import BusStopMap from './components/map.js'
 
 function App() {
 
@@ -11,7 +12,7 @@ function App() {
 
   return (
     <div className="App">
-      Hello
+      <BusStopMap />
     </div>
   );
 }
