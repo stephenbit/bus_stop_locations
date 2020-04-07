@@ -5,7 +5,7 @@ import BusStopMap from './components/BusStopMap.js'
 function App() {
 
   const [stops, setStops] = useState([]);
-  const [busNumberKeyLookup, setBusNumberKeyLookup] = useState({});
+  const [busNumberLookup, setBusNumberLookup] = useState({});
 
   useEffect(() => {
     fetch('http://localhost:8080')
@@ -16,12 +16,12 @@ function App() {
   useEffect(() => {
     fetch('http://localhost:8080/busServiceNumbers')
       .then(res => res.json())
-      .then(busNumberKeyLookup => setBusNumberKeyLookup(busNumberKeyLookup))
+      .then(busNumberLookup => setBusNumberLookup(busNumberLookup))
   }, [])
 
   return (
     <div className="App">
-      <BusStopMap stops={stops}/>
+      <BusStopMap stops={stops} busNumberLookup={busNumberLookup}/>
     </div>
   );
 }
