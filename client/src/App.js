@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import BusStopMap from './components/BusStopMap.js'
+import BusServiceDropdown from './components/BusServiceDropdown.js'
+
 
 function App() {
 
@@ -22,6 +24,7 @@ function App() {
   return (
     <div className="App">
       <BusStopMap stops={stops} busNumberLookup={busNumberLookup}/>
+      <BusServiceDropdown busNumberLookup={busNumberLookup}/>
     </div>
   );
 }
