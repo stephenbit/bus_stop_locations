@@ -14,9 +14,7 @@ const getDateInBusTrackerFormat = (date) => {
         dateOfMonth = "0" + dateOfMonth
     } 
     const hour = date.getHours()
-    console.log(dateOfMonth)
     const dateInBusTrackerFormat = runningDate.concat(year, month, dateOfMonth, hour)
-    console.log(dateInBusTrackerFormat)
     return dateInBusTrackerFormat
 }
 

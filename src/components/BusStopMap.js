@@ -31,7 +31,7 @@ function BusStopMap({ stops, busNumberLookup }) {
     const position = [55.948714, -3.199913]
 
     const map = (
-        <Map center={position} zoom={11.5} style={{ height: '100vh', width: "50vw" }}>
+        <Map center={position} zoom={11.5} style={{ height: '100vh', width: "100vw" }}>
             <TileLayer
                 url="https://cartodb-basemaps-{s}.global.ssl.fastly.net/rastertiles/voyager/{z}/{x}/{y}{r}.png"
                 attribution='&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="http://carto.com/attributions">CARTO</a>'
