@@ -6,7 +6,8 @@ function BusServiceDropdown({busNumberLookup}) {
         name="Select Bus"
         style={{
             position:'absolute',
-            marginTop:5,
+            top:50,
+            marginLeft:1000,
             zIndex:2000,
             marginRight:0
             }}
