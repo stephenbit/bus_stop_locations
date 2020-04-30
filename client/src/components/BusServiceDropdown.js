@@ -5,11 +5,10 @@ function BusServiceDropdown({busNumberLookup}) {
         <select
         name="Select Bus"
         style={{
-            position:'absolute',
+            position:'fixed',
             top:50,
-            marginLeft:1000,
             zIndex:2000,
-            marginRight:0
+            right:100
             }}
         >
         <option>Bus 30</option>
