@@ -3,7 +3,6 @@ import React from 'react'
 function BusServiceDropdown({busNumberLookup, onBusServiceChosen}) {
 
     const busServices = Object.keys(busNumberLookup);
-    console.log(busServices);
     const options = busServices.map(busService => (
         <option
             value={busService}
@@ -28,6 +27,7 @@ function BusServiceDropdown({busNumberLookup, onBusServiceChosen}) {
             }}
             onChange={onSelectChange}
         >
+        <option>Please Select a Service</option>
         {options}
         </select>
     )
