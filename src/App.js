@@ -8,9 +8,22 @@ function App() {
 
   const [stops, setStops] = useState([]);
   const [busNumberLookup, setBusNumberLookup] = useState({});
+  const [selectedBusService, setSelectedBusService] = useState("")
 
-  function outputChosenBusService(busService){
-    console.log(busService);
+  function updateSelectedBusService(busService){
+    setSelectedBusService(busService)
+  }
+
+  function getFilterStopsBySelectedBusService(){
+    const filteredStops = stops.filter(stop => {
+      // ["11", ...]
+      return stop.services.includes(selectedBusService)
+      // return true 
+      // "11" == ["11"] <- won't work
+      // when busService ("11") is in A STOP's services
+      // filteredStops = [{services: ["11"] }, {services: ["11"] }]
+    })
+    return filteredStops
   }
 
   useEffect(() => {
@@ -27,10 +40,10 @@ function App() {
 
   return (
     <div className="App">
-      <BusStopMap stops={stops.slice(0, 10)} busNumberLookup={busNumberLookup}/>
+      <BusStopMap stops={getFilterStopsBySelectedBusService()} busNumberLookup={busNumberLookup}/>
       <BusServiceDropdown 
         busNumberLookup={busNumberLookup}
-        onBusServiceChosen={outputChosenBusService}
+        onBusServiceChosen={updateSelectedBusService}
       />
     </div>
   );
