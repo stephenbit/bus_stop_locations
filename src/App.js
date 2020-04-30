@@ -9,6 +9,10 @@ function App() {
   const [stops, setStops] = useState([]);
   const [busNumberLookup, setBusNumberLookup] = useState({});
 
+  function outputChosenBusService(busService){
+    console.log(busService);
+  }
+
   useEffect(() => {
     fetch('http://localhost:8080')
       .then(res => res.json())
@@ -23,8 +27,11 @@ function App() {
 
   return (
     <div className="App">
-      <BusStopMap stops={stops} busNumberLookup={busNumberLookup}/>
-      <BusServiceDropdown busNumberLookup={busNumberLookup}/>
+      <BusStopMap stops={stops.slice(0, 10)} busNumberLookup={busNumberLookup}/>
+      <BusServiceDropdown 
+        busNumberLookup={busNumberLookup}
+        onBusServiceChosen={outputChosenBusService}
+      />
     </div>
   );
 }
