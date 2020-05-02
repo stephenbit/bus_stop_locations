@@ -2,13 +2,18 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 import BusStopMap from './components/BusStopMap.js'
 import BusServiceDropdown from './components/BusServiceDropdown.js'
-
+import displaySelectedBusNumber from './components/displaySelectedBusNumber.js'
 
 function App() {
 
   const [stops, setStops] = useState([]);
   const [busNumberLookup, setBusNumberLookup] = useState({});
   const [selectedBusService, setSelectedBusService] = useState("")
+  const [selectedBusNumber, setSelectedBusNumber] = useState("")
+
+  useEffect(() => {
+    setSelectedBusNumber(busNumberLookup[selectedBusService])
+  }, [selectedBusService])
 
   function updateSelectedBusService(busService){
     setSelectedBusService(busService)
@@ -16,12 +21,7 @@ function App() {
 
   function getFilterStopsBySelectedBusService(){
     const filteredStops = stops.filter(stop => {
-      // ["11", ...]
       return stop.services.includes(selectedBusService)
-      // return true 
-      // "11" == ["11"] <- won't work
-      // when busService ("11") is in A STOP's services
-      // filteredStops = [{services: ["11"] }, {services: ["11"] }]
     })
     return filteredStops
   }
@@ -44,6 +44,9 @@ function App() {
       <BusServiceDropdown 
         busNumberLookup={busNumberLookup}
         onBusServiceChosen={updateSelectedBusService}
+      />
+      <displaySelectedBusNumber
+        selectedBusNumber={selectedBusNumber}
       />
     </div>
   );
