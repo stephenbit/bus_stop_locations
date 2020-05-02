@@ -22,22 +22,19 @@ function BusServiceDropdown(
     }
 
     return(
-        <body>
-            <select
-                name="Select Bus"
-                style={{
-                    position:'fixed',
-                    top:25,
-                    zIndex:2000,
-                    right:50
-                    }}
-                onChange={onSelectChange}
-            >
-            <option>Please Select a Service</option>
-            {options}
-            </select>
-            <div></div>
-        </body>
+        <select
+            name="Select Bus"
+            style={{
+                position:'fixed',
+                top:25,
+                zIndex:400,
+                right:50
+                }}
+            onChange={onSelectChange}
+        >
+        <option>Please Select a Service</option>
+        {options}
+        </select>
         )
 }
 
