@@ -14,6 +14,7 @@ function BusStopMap({ stops, busNumberLookup }) {
     }
 
     const markers = stops.map(stop => {
+        
         return (
             <Marker
                 position={[stop.x, stop.y]}
