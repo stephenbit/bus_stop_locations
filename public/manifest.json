@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Lothian Bus API",
+  "name": "Lothian Bus API",
   "icons": [],
   "start_url": ".",
   "display": "standalone",

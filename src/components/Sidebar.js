@@ -6,7 +6,7 @@ function sidebar({selectedBusNumber}) {
 return (
     <section
         style={{
-            backgroundColor: 'blue',
+            backgroundColor: 'gh',
             height:'100vh',
             width:'200px',
             position:'absolute',
@@ -17,6 +17,7 @@ return (
         <div
             style={{
                 position:'absolute',
+                textAlign: 'center',
                 top:25,
                 fontSize:100
                 }}
