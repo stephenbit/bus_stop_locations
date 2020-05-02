@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 import BusStopMap from './components/BusStopMap.js'
 import BusServiceDropdown from './components/BusServiceDropdown.js'
-import displaySelectedBusNumber from './components/displaySelectedBusNumber.js'
+import Sidebar from './components/Sidebar.js'
 
 function App() {
 
@@ -45,7 +45,7 @@ function App() {
         busNumberLookup={busNumberLookup}
         onBusServiceChosen={updateSelectedBusService}
       />
-      <displaySelectedBusNumber
+      <Sidebar
         selectedBusNumber={selectedBusNumber}
       />
     </div>
