@@ -1,5 +1,6 @@
 import React from 'react'
 import { Map, Marker, Popup, TileLayer } from 'react-leaflet'
+import '../styles/Styles.css';
 
 function BusStopMap({ stops, busNumberLookup }) {
 

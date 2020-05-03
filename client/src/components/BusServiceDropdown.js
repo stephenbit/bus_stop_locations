@@ -1,4 +1,5 @@
 import React from 'react'
+import '../styles/Styles.css';
 
 function BusServiceDropdown(
     {
@@ -22,14 +23,8 @@ function BusServiceDropdown(
     }
 
     return(
-        <select
+        <select className='service-select'
             name="Select Bus"
-            style={{
-                position:'fixed',
-                top:25,
-                zIndex:400,
-                right:50
-                }}
             onChange={onSelectChange}
         >
         <option>Please Select a Service</option>
