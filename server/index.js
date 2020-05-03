@@ -2,7 +2,7 @@
 import express from 'express'
 import fetch from 'node-fetch'
 import cors from 'cors'
-import { getFinalKeyFromDate } from './client/src/generateApiKey.js'
+import { getFinalKeyFromDate } from './generateApiKey.js'
 const app = express()
 
 app.use(cors())
