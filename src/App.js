@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import './App.css';
-import BusStopMap from './components/BusStopMap.js'
-import BusServiceDropdown from './components/BusServiceDropdown.js'
-import Sidebar from './components/Sidebar.js'
+import BusStopMap from './components/BusStopMap.js';
+import BusServiceDropdown from './components/BusServiceDropdown.js';
+import Sidebar from './components/Sidebar.js';
+import './styles.css';
 
 function App() {
 
