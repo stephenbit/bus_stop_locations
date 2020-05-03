@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/Styles.css';
+import '../styles.css';
 
 function sidebar({selectedBusNumber}) {
 
