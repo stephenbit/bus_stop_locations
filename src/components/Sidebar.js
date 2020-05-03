@@ -19,7 +19,10 @@ return (
                 position:'absolute',
                 textAlign: 'center',
                 top:25,
-                fontSize:100
+                fontSize: 80,
+                width: '120px',
+                height: '120px',
+                border: 'solid thick red'
                 }}
                 >
                 {selectedBusNumber}
