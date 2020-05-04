@@ -27,13 +27,13 @@ function App() {
   }
 
   useEffect(() => {
-    fetch('http://localhost:8080')
+    fetch('https://lothian-bus.herokuapp.com/')
       .then(res => res.json())
       .then(obJOfStops => setStops(obJOfStops.busStops))
   }, [])
 
   useEffect(() => {
-    fetch('http://localhost:8080/busServiceNumbers')
+    fetch('https://lothian-bus.herokuapp.com/busServiceNumbers')
       .then(res => res.json())
       .then(busNumberLookup => setBusNumberLookup(busNumberLookup))
   }, [])
