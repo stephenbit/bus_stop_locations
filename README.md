@@ -1,4 +1,16 @@
-# Starting the app
+# Lothian Bus Stop Positions
+
+## ⭐️ This app can now be found online ⭐️ 
+
+### Hosted on Netlify
+
+#### https://lothian-bus.netlify.app/
+
+### The JSON can be found here:
+
+#### https://lothian-bus.herokuapp.com/
+
+## Running the app locally
 
 ### To run the server, start from root
 

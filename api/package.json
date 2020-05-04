@@ -16,5 +16,8 @@
     "node-fetch": "^2.6.0",
     "nodemon": "^2.0.2"
   },
-  "type": "module"
+  "type": "module",
+  "engines": {
+    "node": "14.x"
+  }
 }

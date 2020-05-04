@@ -3,7 +3,11 @@ import express from 'express'
 import fetch from 'node-fetch'
 import cors from 'cors'
 import { getFinalKeyFromDate } from './generateApiKey.js'
+// const express = require('express')
+// const fetch = require('node-fetch')
+// const cors = require('cors')
 const app = express()
+// const { getFinalKeyFromDate } = require('./generateApiKey.js')
 
 app.use(cors())
 // Access-Control-Allow-Origin: *
@@ -34,8 +38,10 @@ app.get('/busServiceNumbers', (request, response) => {
     .then(finalBusNumberLookup => response.json(finalBusNumberLookup))
 })
 
+// app.listen(8080, () => {
+//   console.log('listening on port 8080')
+// })
 
-
-app.listen(8080, () => {
-  console.log('listening on port 8080')
+app.listen(process.env.PORT || 8080, function () {
+  console.log(`Listening on port ${this.address().port}`)
 })

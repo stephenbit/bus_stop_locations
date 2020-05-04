@@ -35,7 +35,7 @@ function BusStopMap({ stops, busNumberLookup }) {
             center={position} zoom={11.5}>
             <TileLayer
                 url="https://cartodb-basemaps-{s}.global.ssl.fastly.net/rastertiles/voyager/{z}/{x}/{y}{r}.png"
-                attribution='&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="http://carto.com/attributions">CARTO</a>'
+                attribution='&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="http://carto.com/attributions">CARTO</a>' 
             />
             {markers}
         </Map>
