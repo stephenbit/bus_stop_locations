@@ -13,9 +13,7 @@ code {
 .map {
     height: 100vh;
     width: auto;
-    margin-left: 200px;
 }
-/*  */
 
 /* BusServiceDropdown */
 .service-select {
@@ -24,27 +22,34 @@ code {
     z-index: 400;
     right: 50px;
 }
-/*  */
 
 /* Sidebar */
 .sidebar {
-    background-color: ghostWhite;
-    height: 100vh;
-    width: 200px;
+    background-color: gainsboro;
+    height: 90vh;
+    width: 120px;
     position: absolute;
     z-index: 500;
-    top: 0px;
-    border-radius: 20%;
+    top: 0;
+    bottom: 0;
+    left: 30px;
+    border-radius: 10px;
+    margin: auto;
 }
 
 .number-box {
-    position:absolute;
-    text-align: center;
+    display : flex;
+    position: absolute;
+    align-items: center;
+    width: 80px;
+    height: 80px;
     top: 25px;
-    font-size: 80;
-    width: 120px;
-    height: 120px;
-    border: solid thick red
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    border: solid thick green;
+    justify-content: center;
+    font-size: 50px;
 }
 
 .service-select {
@@ -52,4 +57,10 @@ code {
     top: 25px;
     z-index: 400;
     right: 50px;
+}
+
+/* Map */
+.leaflet-control-zoom {
+    left: 150px;
+    top: 40px;
 }
