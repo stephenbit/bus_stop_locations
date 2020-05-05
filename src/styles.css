@@ -15,6 +15,11 @@ code {
     width: auto;
 }
 
+.leaflet-control-zoom {
+    left: 150px;
+    top: 40px;
+}
+
 /* BusServiceDropdown */
 .service-select {
     position: fixed;
@@ -57,10 +62,4 @@ code {
     top: 25px;
     z-index: 400;
     right: 50px;
-}
-
-/* Map */
-.leaflet-control-zoom {
-    left: 150px;
-    top: 40px;
 }
